@@ -4,10 +4,7 @@ import com.fshows.commons.df.KfshopDf;
 import com.fshows.commons.df.KfshopDfTest;
 import com.fshows.commons.df.KfshopQuery;
 import com.fshows.commons.df.WithdrawTest;
-import com.fshows.commons.kfshop.AgencyBalanceDeal;
-import com.fshows.commons.kfshop.BalanceDeal;
-import com.fshows.commons.kfshop.BalanceDealToday;
-import com.fshows.commons.kfshop.BalanceUnionDealToday;
+import com.fshows.commons.kfshop.*;
 import com.fshows.commons.liquidation.*;
 import com.fshows.commons.sftp.SFTPDownload;
 import com.fshows.commons.sftp.SFTPToAlipay;
@@ -111,6 +108,12 @@ public class MainExecute {
 			BalanceUnionDealToday obj = new BalanceUnionDealToday();
 			obj.execute();
 		}
+
+		if ("BohaiStatusUpdate".equals(a)) {
+			BohaiStatusUpdate obj = new BohaiStatusUpdate();
+			obj.execute();
+		}
+
 
 
 	}
